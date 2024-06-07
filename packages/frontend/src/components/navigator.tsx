@@ -11,7 +11,7 @@ export default function Navigator(){
     
     return (
         <>
-        <header className="bg-background flex w-full items-center justify-between p-1">
+        <header className="relative bg-background flex w-full items-center justify-between p-1">
             
             <div id="avatar-container" className="align-middle">
                 <Avatar className="block dark:hidden lg:w-[5vh] lg:h-[5vh]">
@@ -36,10 +36,10 @@ export default function Navigator(){
 
         </header>
         
-        <div className="h-[100vh] w-[100vw] bg-kamino dark:bg-space dark:bg-blend-darken bg-cover bg-center">
-            <span className="blur-none"><Outlet /></span>
-        </div>
+        <span className="relative blur-none"><Outlet /></span>
         
+        <div className="absolute top-0 left-0 -z-10 h-[100vh] w-[100vw] bg-kamino dark:bg-space dark:bg-blend-darken bg-cover bg-center" />
+
         </>
     )
 }
