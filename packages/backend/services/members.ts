@@ -14,13 +14,14 @@ export default class MembersService{
                     json_agg(JSON_BUILD_OBJECT(cosplays.id,units.name)) AS cosplay_units,
                     json_agg(JSON_BUILD_OBJECT(cosplays.id,units.color)) AS cosplay_colors,
                     json_agg(JSON_BUILD_OBJECT(cosplays.id,clones.image_path)) AS cosplay_avatars,
-                    json_agg(JSON_BUILD_OBJECT(cosplays.id,cosplays.image_url)) AS cosplay_images
+                    json_agg(JSON_BUILD_OBJECT(cosplays.id,cosplays.image_url)) AS cosplay_images,
+                    json_agg(JSON_BUILD_OBJECT(cosplays.id,cosplays.status)) AS cosplay_status
                     FROM members 
                     LEFT JOIN cosplays ON cosplays.member_id=members.id 
                     LEFT JOIN clones ON cosplays.clone_id=clones.id 
                     LEFT JOIN unlisted_clones ON cosplays.unlisted_id=unlisted_clones.id 
                     LEFT JOIN units ON units.id=COALESCE(clones.unit_id,unlisted_clones.unit_id) 
-                    WHERE members.status='active' AND members.rank IN ('Kadet','Żołnierz','Kapitan','Sierżant','Komandor')
+                    WHERE members.status='active' AND members.rank IN ('kadet','żołnierz','kapitan','sierżant','komandor') AND cosplays.status IN ('reserved','finished')
                     GROUP BY members.id
                     ORDER BY members.id
             `;  
