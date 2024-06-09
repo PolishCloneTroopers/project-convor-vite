@@ -131,3 +131,4 @@ dist
 
 # vite
 .vite/deps_temp_*
+.vercel
