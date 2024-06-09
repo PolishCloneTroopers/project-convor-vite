@@ -3,11 +3,11 @@ import { sql } from '@vercel/postgres';
 export default class MembersService{
 
 
-    public static async listActiveMembers(){
+    public static async listPublicProfiles(){
         try{
             const result =
             await sql`
-                SELECT members.id, members.nickname, members.instagram, members.discord_id, members.voivodeship, members.about, members.rank, members.joined,
+                SELECT members.id, members.nickname, members.instagram, members.voivodeship, members.about, members.rank, members.joined,
                     json_agg(JSON_BUILD_OBJECT(cosplays.id,COALESCE(clones.number,unlisted_clones.number))) AS cosplay_numbers, 
                     json_agg(JSON_BUILD_OBJECT(cosplays.id,COALESCE(clones.name,unlisted_clones.name))) AS cosplay_names, 
                     json_agg(JSON_BUILD_OBJECT(cosplays.id,COALESCE(clones.variant,unlisted_clones.variant))) AS cosplay_variants,
