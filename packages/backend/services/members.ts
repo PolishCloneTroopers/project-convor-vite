@@ -21,7 +21,7 @@ export default class MembersService{
                     LEFT JOIN clones ON cosplays.clone_id=clones.id 
                     LEFT JOIN unlisted_clones ON cosplays.unlisted_id=unlisted_clones.id 
                     LEFT JOIN units ON units.id=COALESCE(clones.unit_id,unlisted_clones.unit_id) 
-                    WHERE members.status='active' AND members.rank IN ('Kadet','Żołnierz','Kapitan','Sierżant','Komandor') AND cosplays.status IN ('reserved','finished')
+                    WHERE members.status='active' AND members.rank IN ('kadet','żołnierz','kapitan','sierżant','komandor') AND cosplays.status IN ('reserved','finished')
                     GROUP BY members.id
                     ORDER BY members.id
             `;  
