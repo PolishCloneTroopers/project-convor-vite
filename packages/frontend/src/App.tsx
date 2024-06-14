@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Navigator from "@/components/navigator"
 import { Card } from "@/components/ui/card";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Hangar } from "@/components/hangar";
 
 const router = createBrowserRouter([
   {
@@ -36,14 +37,6 @@ function App() {
         <RouterProvider router={router} />
       </ThemeProvider>
   )
-}
-
-function Hangar() {
-  return (
-    <Card>
-      <h1>Hangar</h1>
-    </Card>
-  );
 }
 
 function About() {
