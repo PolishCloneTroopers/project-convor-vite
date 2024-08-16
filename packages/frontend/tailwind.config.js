@@ -51,6 +51,16 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        datapad: {
+          DEFAULT: "hsl(var(--datapad))",
+          foreground: "hsl(var(--datapad-foreground))",
+          accent: "hsl(var(--datapad-accent))",
+          'accent-foreground': "hsl(var(--datapad-accent-foreground))",
+          details: "hsl(var(--datapad-details))",
+          border: "hsl(var(--datapad-border))",
+          'gradient-from': "hsla(var(--datapad-gradient-from))",
+          'gradient-to': "hsla(var(--datapad-gradient-to))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -71,10 +81,18 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: {
+      backgroundImage: (theme) => ({
+        'datapad-lines': `linear-gradient(to right bottom, ${theme('colors.datapad.gradient-from')}, ${theme('colors.datapad.gradient-to')}),
+          repeating-linear-gradient(
+            to bottom,
+            ${theme('colors.datapad.DEFAULT')} 0px,
+            ${theme('colors.datapad.DEFAULT')} 5px,
+            ${theme('colors.datapad.accent')} 5px,
+            ${theme('colors.datapad.accent')} 7px
+          )`,
         space: "url('@/assets/space.jpg')",
         kamino: "url('@/assets/kamino_crop.jpg')",
-      },
+      }),
     },
   },
   plugins: [require("tailwindcss-animate")],
