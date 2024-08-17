@@ -1,12 +1,18 @@
 import { Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import { CarouselNext, CarouselPrevious } from "@/components/cutom-ui/carousel-buttons";
+import { PinContainer } from "@/components/cutom-ui/events-3d-pin";
 function CarouselEvent(props:any){
     return(
-        <CarouselItem className="text-center align-center basis-6/12 lg:basis-1/3"><Card className="bg-datapad-lines border-datapad-border border-double border-4 h-[10vh]">
-            <h1 className="h-1/2 flex items-center text-datapad-foreground justify-center font-semibold leading-5 pt-2">{props.name}</h1>
-            <h2 className="h-1/2 flex items-center text-datapad-foreground justify-center leading-4 pb-2">{props.desc}</h2>
-        </Card></CarouselItem>
+        <CarouselItem className="text-center align-center basis-6/12 lg:basis-1/3">
+            <PinContainer
+                title={"Zobacz"+" >"}
+                href={"www."+props.name+".pl"}>
+            <Card className="bg-datapad-lines border-datapad-border border-double border-4 h-[10vh]">
+                <h1 className="h-1/2 flex items-center text-datapad-foreground justify-center font-semibold leading-5 pt-2">{props.name}</h1>
+                <h2 className="h-1/2 flex items-center text-datapad-foreground justify-center leading-4 pb-2">{props.desc}</h2>
+            </Card></PinContainer>
+        </CarouselItem>
     )
 }
 
