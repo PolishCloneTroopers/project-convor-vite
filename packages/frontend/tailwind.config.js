@@ -95,7 +95,7 @@ module.exports = {
             ${theme('colors.datapad.accent')} 7px
           )`,
         space: "url('@/assets/space.jpg')",
-        kamino: "url('@/assets/kamino_crop.jpg')",
+        kamino: `linear-gradient(to bottom, hsla(var(--background), 50%), ${theme('colors.datapad.gradient-to')}),url('@/assets/kamino_crop.jpg')`,
       }),
     },
   },
@@ -103,7 +103,7 @@ module.exports = {
 }
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
+function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
