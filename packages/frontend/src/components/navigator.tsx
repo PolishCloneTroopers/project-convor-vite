@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ModeToggle } from "@/components/mode-toggle";
 import PCT_logo_darkside from "@/assets/PCT_logo_transparent_white.png"
@@ -11,18 +11,19 @@ export default function Navigator(){
     
     return (
         <>
-        <header className="relative bg-background flex w-full items-center justify-between p-1">
+        <div className="absolute top-0 left-0 -z-10 h-[100vh] w-[100vw] bg-kamino dark:bg-space dark:bg-blend-darken bg-cover bg-center" />
+        <header className="relative bg-background flex w-full h-[8vh] items-center justify-between p-1">
             
-            <div id="avatar-container" className="align-middle">
-                <Avatar className="block dark:hidden lg:w-[5vh] lg:h-[5vh]">
+            <NavLink id="avatar-container" className="align-middle size-[6vh]" to="/">
+                <Avatar className="block dark:hidden size-[6vh]">
                     <AvatarImage src={PCT_logo_lightside} alt="PCT Logo"/>
                     <AvatarFallback>PCT</AvatarFallback>
                 </Avatar>
-                <Avatar className="hidden dark:block">
+                <Avatar className="hidden dark:block size-[6vh]">
                     <AvatarImage src={PCT_logo_darkside} alt="PCT Logo"/>
                     <AvatarFallback>PCT</AvatarFallback>
                 </Avatar>
-            </div>
+            </NavLink>
             
             <span className="hidden md:inline-flex">
                 <Navbar />
@@ -36,9 +37,8 @@ export default function Navigator(){
 
         </header>
         
-        <span className="relative blur-none"><Outlet /></span>
+        <span className="relative h-[92vh] z-0"><Outlet /></span>
         
-        <div className="absolute top-0 left-0 -z-10 h-[100vh] w-[100vw] bg-kamino dark:bg-space dark:bg-blend-darken bg-cover bg-center" />
 
         </>
     )
