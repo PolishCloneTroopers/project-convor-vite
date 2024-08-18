@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button"
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem } from "./ui/navigation-menu"
 import { NavLink, useLocation } from "react-router-dom"
 import { navigationMenuTextStyle } from "@/styles/tailwind-styles"
+import { Credits } from "./credits"
 
 export function MenuToggle() {
     const location = useLocation()
@@ -57,6 +58,11 @@ export function MenuToggle() {
                             <NavLink to="/join" className={location.pathname=="/join" ? 'underline' : ''}>
                                 Dołącz do nas
                             </NavLink>
+                        </SheetClose>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem className={navigationMenuTextStyle()}>
+                        <SheetClose asChild>
+                            <Credits/>
                         </SheetClose>
                     </NavigationMenuItem>
                 </NavigationMenuList>
