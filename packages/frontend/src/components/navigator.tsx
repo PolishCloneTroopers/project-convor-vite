@@ -7,16 +7,18 @@ import { Navbar } from "@/components/navbar";
 import { MenuToggle } from "@/components/menu-toggle";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "./ui/stars-background";
+import { Credits } from "./credits";
 export default function Navigator(){
 
     
     return (
         <>
+        
         <StarsBackground className="hidden dark:block" starDensity={0.00075}/>
         <ShootingStars className="hidden dark:block" starHeight={1} starWidth={10} trailColor="#2EB9DF" starColor="#9EAAFF"/>
         <div className="absolute top-0 left-0 -z-10 h-[100vh] w-[100vw] bg-kamino dark:bg-black dark:bg-blend-darken bg-cover bg-center" />
-        <header className="relative bg-background flex w-full h-[8vh] items-center justify-between p-1">
-            
+        
+        <nav id="navbar" className="relative fixed top-0 bg-background flex w-full h-[8vh] items-center justify-between p-1">
             <NavLink id="avatar-container" className="align-middle size-[6vh]" to="/">
                 <Avatar className="block dark:hidden size-[6vh]">
                     <AvatarImage src={PCT_logo_lightside} alt="PCT Logo"/>
@@ -38,11 +40,10 @@ export default function Navigator(){
                 <span className="inline-flex md:hidden m-1"><MenuToggle/></span>
             </div>
 
-        </header>
+        </nav>
         
         <span className="relative h-[92vh] z-0"><Outlet /></span>
-        
-
+        <Credits className="underline pr-2 hidden md:block absolute right-0 top-[97vh] h-[3vh]"/>
         </>
     )
 }

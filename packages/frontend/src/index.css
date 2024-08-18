@@ -74,6 +74,19 @@
     --chart-4: 280, 65%, 60%;
     --chart-5: 340, 75%, 55%;
   }
+
+  @font-face {
+    font-family: 'Asus Rog Capitalized';
+    font-style: normal;
+    font-weight: bold;
+    src: url(./fonts/asusrog_regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'ROG LyonsType Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ROG LyonsType Regular'), url('./fonts/ROGLyonsTypeRegular3.woff') format('woff');
+  }
 }
 
 @layer base {

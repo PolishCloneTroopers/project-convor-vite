@@ -6,26 +6,26 @@ export function Navbar(){
     return(
         <NavigationMenu>
             <NavigationMenuList className="flex-col md:flex-row">
-                <NavigationMenuItem className={navigationMenuTextStyle()}>
-                    <NavLink to="/" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                <NavLink to="/" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                    <NavigationMenuItem className={navigationMenuTextStyle()}>
                         Hangar
-                    </NavLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className={navigationMenuTextStyle()}>
-                    <NavLink to="/about" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                    </NavigationMenuItem>
+                </NavLink>
+                <NavLink to="/about" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                    <NavigationMenuItem className={navigationMenuTextStyle()}>
                         O nas
-                    </NavLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className={navigationMenuTextStyle()}>
-                    <NavLink to="/members" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                    </NavigationMenuItem>
+                </NavLink>
+                <NavLink to="/members" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                    <NavigationMenuItem className={navigationMenuTextStyle()}>
                         Członkowie
-                    </NavLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className={navigationMenuTextStyle()}>
-                    <NavLink to="/join" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                    </NavigationMenuItem>
+                </NavLink>
+                <NavLink to="/join" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                    <NavigationMenuItem className={navigationMenuTextStyle()}>
                         Dołącz do nas
-                    </NavLink>
-                </NavigationMenuItem>
+                    </NavigationMenuItem>
+                </NavLink>
             </NavigationMenuList>
         </NavigationMenu>
     )

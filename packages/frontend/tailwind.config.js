@@ -97,6 +97,14 @@ module.exports = {
         space: "url('@/assets/space.jpg')",
         kamino: `linear-gradient(to bottom, hsla(var(--background), 50%), ${theme('colors.datapad.gradient-to')}),url('@/assets/kamino_crop.jpg')`,
       }),
+      fontFamily: {
+        'rog': ['ROG LyonsType Regular', 'normal'],
+        'rog-capitalized': ['Asus ROG Capitalized', 'ROG LyonsType Regular', 'normal'],
+      },
+      fontSize: {
+        '2xs': '0.625rem',
+        '3xs': '0.5rem',
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors],
