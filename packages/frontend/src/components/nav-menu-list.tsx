@@ -30,7 +30,7 @@ export function NavMenuList(){
                 </NavLink>
             </NavigationMenuItem>
             <NavigationMenuItem className={navigationMenuTextStyle()}>
-                <NavLink to="/join"
+                <NavLink to="https://discord.com/invite/WS56DPexDK"
                 className={({isActive})=>{
                     return isActive ? 'underline' : '';
                 }}>
