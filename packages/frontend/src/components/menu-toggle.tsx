@@ -55,7 +55,7 @@ export function MenuToggle() {
                     </NavigationMenuItem>
                     <NavigationMenuItem className={navigationMenuTextStyle()}>
                         <SheetClose asChild>
-                            <NavLink to="/join" className={location.pathname=="/join" ? 'underline' : ''}>
+                            <NavLink to="https://discord.com/invite/WS56DPexDK" className={location.pathname=="/join" ? 'underline' : ''}>
                                 Dołącz do nas
                             </NavLink>
                         </SheetClose>
