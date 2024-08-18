@@ -21,7 +21,7 @@ export function Navbar(){
                         Członkowie
                     </NavigationMenuItem>
                 </NavLink>
-                <NavLink to="/join" className={({isActive})=>{return isActive ? 'underline' : '';}}>
+                <NavLink to="https://discord.com/invite/WS56DPexDK" className={({isActive})=>{return isActive ? 'underline' : '';}}>
                     <NavigationMenuItem className={navigationMenuTextStyle()}>
                         Dołącz do nas
                     </NavigationMenuItem>

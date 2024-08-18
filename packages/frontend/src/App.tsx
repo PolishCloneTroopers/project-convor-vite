@@ -3,6 +3,8 @@ import Navigator from "@/components/navigator"
 import { Card } from "@/components/ui/card";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Hangar } from "@/components/hangar";
+import { About } from "@/components/about";
+import { Members } from "@/components/members";
 
 const router = createBrowserRouter([
   {
@@ -37,22 +39,6 @@ function App() {
         <RouterProvider router={router} />
       </ThemeProvider>
   )
-}
-
-function About() {
-  return (
-    <Card>
-      <h1>O nas</h1>
-    </Card>
-  );
-}
-
-function Members() {
-  return (
-    <Card>
-      <h1>Członkowie</h1>
-    </Card>
-  );
 }
 
 function Join() {
