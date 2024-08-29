@@ -1,7 +1,7 @@
 import { Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import { CarouselNext, CarouselPrevious } from "@/components/cutom-ui/carousel-buttons";
-import { PinContainer } from "@/components/cutom-ui/events-3d-pin";
+//import { PinContainer } from "@/components/cutom-ui/events-3d-pin";
 function CarouselEvent(props:{name:string, desc:string, href:string, linkMessage:string}){
     
     
@@ -24,8 +24,8 @@ export function EventCarousel(){
         <Carousel className=" w-8/12 lg:w-10/12 mx-[16vw] lg:mx-[8vw] mt-6">
                 <h2 className="text-datapad-accent-foreground font-medium">Tu lądujemy:</h2>
                 <CarouselContent>
-                    <CarouselEvent name="Dni Fantastyki 2024" desc="Wrocław 20&minus;25.08" href="https://dnifantastyki.pl" linkMessage="Strona"/>
-                    <CarouselEvent name="Pilkon 2024 (Wioska)" desc="Piła 30.08&minus;1.09" href="https://pilkon.pl" linkMessage="Strona"/>
+                    <CarouselEvent name="Pilkon 2024 (Wioska!)" desc="Piła 30.08&minus;1.09" href="https://pilkon.pl" linkMessage="Strona"/>
+                    <CarouselEvent name="Coś po drodze na pewno" desc="Ale co, to się jeszcze okaże..." href="/" linkMessage="???"/>
                     <CarouselEvent name="Pyrkon 2025" desc="Poznań 13&minus;15.06.2025" href="https://pyrkon.pl" linkMessage="Strona"/>
                 </CarouselContent>
             <CarouselPrevious className="text-datapad-accent-foreground hover:text-datapad-foreground border-datapad-border border-solid border-2 mt-2 bg-datapad-accent"/>
