@@ -1,5 +1,5 @@
 > [!WARNING]  
-> The project was canceled due to the group ending its public-oriented activity :(
+> The project has been canceled due to the group ending its public-oriented activity :(
 
 --- 
 
